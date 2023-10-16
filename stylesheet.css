@@ -1,0 +1,46 @@
+body{
+    background-color: #dec0da;
+}
+
+h1{
+    background-color: rgb(143, 187, 123);
+    text-align: center;
+    color: rgb(37, 37, 37);
+    margin: auto 15px auto 15px;
+    padding: 5px;
+}
+
+h2{
+    text-align: center;
+    color:#23581d;
+    margin:5px;
+}
+
+p{
+    text-align: center;
+    font: bold 16pt arial;
+}
+
+span{
+    color:#ff0000
+}
+
+button{
+    background-color: rgb(124, 21, 21);
+    font: 16pt comic sans ms;
+    padding: 5px;
+}
+
+a{
+    font-size: 40px;
+    color:#22A3F0;
+    text-shadow: black 2px 2px;
+    margin: auto 10px auto 10px;
+}
+
+nav{
+    text-align: center;
+    margin: 10px auto 20px auto;
+    padding: 5px;
+    background-color: rgb(139, 93, 155);
+}

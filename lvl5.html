@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External Files</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script src="utilities.js"></script>
+    <script>
+        function initialize(){
+            numberOuput = document.getElementById("numOut");
+            rndNum = 0;
+
+            visitsOut = document.getElementById("visits");
+
+            if(!sessionStorage.numVisits)
+                sessionStorage.numVisits = 0;
+            else
+                sessionStorage.numVisits++;
+
+            display();
+        }
+
+        function changeNumber(){
+            console.log("click");
+            rndNum = getRandomInteger(1, 10);
+            display();
+        }
+
+        function display(){
+            numberOuput.innerHTML = rndNum;
+
+            visitsOut.innerHTML = sessionStorage.numVisits;
+        }
+    </script>
+</head>
+<body onload="initialize();">
+    <nav>
+        <a href="index.html">Level 1-2</a>
+        <a href="lvl3.html">Level 3</a>
+        <a href="lvl4.html">Level 4</a>
+    </nav>
+
+    <h1>This is my great page about external files</h1>
+
+    <h2>I have visted this page <span id="visits"></span> times.</h2>
+
+    <p id="numOut"></p>
+
+    <p>
+    <button onclick="changeNumber();">Change the number</button>
+    </p>
+
+</body>
+</html>

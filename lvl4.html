@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Complex Properties</title>
+    <style>
+        body{
+            background-color: #dae99b;
+        }
+
+        div{
+            font: bold 24pt comic sans ms;
+            text-decoration: underline wavy green;
+        }
+
+        a{
+            font-size: 40px;
+            color:#22A3F0;
+            text-shadow: black 2px 2px;
+            margin: auto 10px auto 10px;
+        }
+
+        nav{
+            text-align: center;
+            margin: 10px auto 20px auto;
+            padding: 5px;
+            background-color: rgb(139, 93, 155);
+        }
+    </style>
+    <script>
+        function initialize(){
+            textOutput = document.getElementById("textDiv");
+            fontSizeOutput = document.getElementById("sizeOut");
+    
+            fontSize = 24;
+        }
+
+        function modifyFontSize(mod){
+            console.log("click");
+            fontSize += mod;
+
+            if(fontSize < 4)
+                fontSize = 4;
+            display();
+        }
+
+        function display(){
+            fontSizeOutput.innerHTML = fontSize;
+            textOutput.style.fontSize = fontSize + "pt";
+        }
+    </script>
+</head>
+<body onload="initialize();">
+    <nav>
+        <a href="index.html">Level 1-2</a>
+        <a href="lvl3.html">Level 3</a>
+        <a href="lvl5.html">Level 5-6</a>
+    </nav>
+
+    <div id="textDiv">
+        I am a wonderful example of how fonts work.
+    </div>
+
+    <hr/>
+
+    <p>
+        <div>Current font size: <span id="sizeOut"></span>point</div>
+        <button onclick="modifyFontSize(1);">Font Size ++</button>
+        <button onclick="modifyFontSize(-1);">Font Size --</button>
+    </p>
+</body>
+</html>

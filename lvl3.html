@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic CSS</title>
+    <style> 
+
+        body{
+            background-color: #95c58e;
+        }
+
+        div{
+            text-align: center;
+            color: black;
+            background-color: orange;
+        }
+
+        a{
+            font-size: 40px;
+            color:#22A3F0;
+            text-shadow: black 2px 2px;
+            margin: auto 10px auto 10px;
+        }
+
+        nav{
+            text-align: center;
+            margin: 10px auto 20px auto;
+            padding: 5px;
+            background-color: rgb(139, 93, 155);
+        }
+
+        button{
+            margin: 5px 50px 5px 50px;
+            padding: 5px;
+            background-color: rgb(108, 81, 45);
+            font-size: 16px;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+
+        function initialize(){
+            halloweenText = document.getElementById("colorDiv");
+            fore = "black";
+            back = "orange";
+            textWidth = 100;
+        }
+
+        function toggleColor(){
+            var tmp = fore;
+            fore = back;
+            back = tmp;
+
+            display();
+        }
+
+        function display(){
+            halloweenText.style.color = fore;
+            halloweenText.style.backgroundColor = back;
+            halloweenText.style.width = textWidth + "%";
+        }
+
+        function changeWidth(w){
+            textWidth = w;
+            display();
+        }
+    </script>
+</head>
+<body onload="initialize();">
+    <nav>
+        <a href="index.html">Level 1-2</a>
+        <a href="lvl4.html">Level 4</a>
+        <a href="lvl5.html">Level 5-6</a>
+    </nav>
+
+    <div id="colorDiv">
+        Click the button to switch me from black to orange and back again and again.
+        Happy Halloween!
+    </div>
+
+    <button onclick="toggleColor();">Toggle Colors</button>
+    <button onclick="changeWidth(25);">25% Width</button>
+    <button onclick="changeWidth(50);">50% Width</button>
+    <button onclick="changeWidth(75);">75% Width</button>
+    <button onclick="changeWidth(100);">100% Width</button>
+</body>
+</html>
